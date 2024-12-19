@@ -1,0 +1,274 @@
+@import Url("https://fonts.googleapis.com/css?family=Sofia");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+.header{
+    background-color :#f18509e0;
+    color: #fff;
+    margin:none;
+    padding:0px;
+    height: 80px;
+    font-size:50%;
+    font-family:verdana;
+    display: flex;
+    align-items : center;
+    justify-content: space-between;
+    position: relative;
+    font-family : 'Merriweather', sans-serif;
+    font-style: oblique;
+}
+.section{
+    background-color:#fab9fa;
+    color:#ffffff;
+    height: 400px;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    font-family:Merriweather;
+    font-size:200%;
+
+
+}
+.homepage-icon{
+    position: absolute;
+    height: 80px;
+    width: 50x;
+}
+#Welcome{
+    padding-top:80px;
+    font-size:140%;
+}
+
+.section p{
+    padding-top: 40px;
+    font-size: 60%;
+    padding-left : 380px;
+}
+.Top-icon{
+    background-color :#90EE90;
+    border:none;
+    height:40px;
+    width:40px;
+}
+.Top-icon{
+    font-size:30px;
+}
+.dropdown{
+    float: right;
+    height : 100px;
+    width: 70px;
+    padding-right: 10px;
+    padding-top: 30px;
+
+
+}
+.dropdown-menu{
+    background-color: #210ed142;
+    border-style : outset;
+}
+.dropdown-menu a{
+    font-size : large;
+    font-style : oblique;
+    text-decoration-line: none;
+    color: white;
+
+}
+.dropdown-menu li:hover {
+    text-decoration-line: underline;
+  }
+.pop_up{
+    height :30px;
+    background-color: rgba(0, 0, 0, 0.74);
+    font-size: 90%;
+    font-style: initial;
+    text-emphasis-color: white;
+    max-width : 100%;
+    overflow : hidden;
+    position:relative;
+    display: flex;
+    padding:0px;
+    margin:0px;
+}
+.pop_up button{
+    height : 20px;
+    width : 10px;
+    margin-right : 3px;
+    margin-left : 3px;
+    padding-left : 10px;
+}
+.pop_up a{
+    color : white;
+    text-decoration-line: none;
+    margin : 1px 5px;
+    padding-top : 5px;
+}
+
+.pop_up a:hover{
+    text-decoration-line :underline;
+    background-color:black;
+}
+.middle{
+    background-color: rgba(37, 37, 37, 0.363);
+    background-image:url('/images/Lights.jpg');
+    background-repeat :repeat-x;
+    background-size :contain;
+    background-position: center;
+    width : 100%;
+    height : 350px;
+    margin-top: 0px;
+    padding : 0px;
+    display: flex;
+
+}
+.middle > p{
+    text-align: center;
+    color : white;
+    font-family : "Sofia", sans-serif;
+    font-size: x-large;
+    align-self :flex-end;
+    padding-left : 580px;
+    padding-bottom : 50px;
+}
+.login_main{
+    display:flex;
+    background-image:url('/images/login_backgrounf.jpeg');
+    background-repeat: repeat;
+    background-size :contain;
+    height : 100px;
+    margin-bottom: 0px;
+    padding-bottom : 0px;
+}
+.login_box{
+    display : flex;
+    justify-content : center;
+    height :400px;
+    width : 500px;
+    background-color : white;
+    margin-top : 0px;
+    margin-bottom: 50px;
+    margin-left : 400px;
+    margin-right : 100px;
+    padding-bottom : 50px;
+    border-style : solid ;
+    border-color : rgb(231, 217, 24);
+    border-radius: 25px;
+    border-width : 2px;
+
+}
+
+.login_box button
+{
+    position : relative;
+    width:140px;
+    border-radius: 10px;
+    left : 80px;
+    margin-top : 0px;
+    margin-bottom : 30px;
+    border-color:#81f3ac;
+    background : linear-gradient(to right, #5ccbdf,#cd64ecd7);
+}
+
+
+#Login_Box{
+    position:relative;
+    left : 150px;
+    height : 900px;
+    width : 650px;
+    margin-left : 180px;
+    border-color : rgb(231, 217, 24);
+    border-radius: 25px;
+    border-width : 2px;
+    background-color : white;
+
+}
+#icon{
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items:center;
+    height : 30px;
+    text-align: center;
+    font-size : 50px;
+}
+#login_UI{
+
+    height : 480px;
+    margin-top : 0px;
+    padding-top : 0px;
+    background : linear-gradient(45deg, #5ccbdf,#31a3c5bb,#cd64ecd7,#7a0fac );
+}
+
+#Login_Box input{
+    position:relative;
+    margin-bottom : 20px;
+    width :500px;
+    border-radius: 10px;
+    left : 20px;
+
+}
+#Login_Box label{
+    padding: relative;
+    margin-left : 4px;
+}
+#Login_Box button
+{
+    display:flex;
+    width:140px;
+    border-radius: 10px;
+    margin-left:100px;
+    text-align: justify;
+    justify-content: center;
+    border-color:#81f3ac;
+    background : linear-gradient(to right, #5ccbdf,#cd64ecd7);
+}
+
+#Welcome_message{
+    position: relative;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ddd;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#WELCOME{
+    position : relative;
+    left :  200px;
+    top : 5px;
+    font-size: 50px;
+
+}
+#toggle-eye{
+    position : absolute;
+    cursor : pointer;
+    color :rgba(0, 0, 0, 0.74);
+}
+#toggle-eye{
+    position: absolute;
+    top : 370px;
+    left : 470px;
+}
+.FoodContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 15px;
+}
+.FoodItem {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 0 1 45%;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+
+.FoodItem img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}

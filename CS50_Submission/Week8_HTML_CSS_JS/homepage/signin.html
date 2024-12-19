@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+        <link href="styles.css" rel="stylesheet">
+        <link rel ="icon" href = "/images/Food_delivery_icon.png">
+
+    </head>
+    <body>
+        <div class = "header">
+            <img class="homepage-icon" src ="/images/A.png" alt="homepage-icon">
+            <p style = "padding-left : 600px ; font-size : 20px; color : black">
+                <b>Food Delivery App</b><br>
+                By Arnab
+            </p>
+            <div class = "dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    &#8801;
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a id = "index_item" href ="index.html">Home</a></li>
+                    <li><a id = "login_item" href = "login.html">Login</a></li>
+                    <li><a  href = "index.html#middle">About us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class = "login_main">
+        </div>
+        <div id = "login_UI" style ="height : 1000px;" >
+            <div id  = "Login_Box">
+            <b id = "WELCOME">WELCOME</b><br>
+                <form>
+                    <label for="fname" style = "position : relative; left : 2px;margin-top :30px;margin-top:40px;" ><b>Full name</b></label><br>
+                    <input id = "fname"type="name" autofocus autocomplete = "off" style="position : relative; left : 2px;" required><br>
+
+                    <label for="username" style = "position : relative; left : 2px;margin-top :30px;margin-top:5px;" ><b>Username</b></label><br>
+                    <input id = "username" type="name" autofocus autocomplete = "off" style="position : relative; left : 2px;" required><br>
+
+                    <label for="email" style="position : relative; left : 2px; "><b>Email-id</b></label><br>
+                    <input id = "email" type = "email"  autofocus autocomplete = "off" style="position : relative; left : 2px;" required><br>
+
+                    <label for="password" style="position : relative; left : 2px;"><b>Create Password</b></label><br>
+                    <input type ="password" id = "password"  minlength = "10" maxlength = "18" style = "position : relative; left : 2px;" required ><br>
+                    <span  id = "toggle-eye" onclick = "showPassword()">
+                        <i class="bi bi-eye-fill"></i>
+                    </span>
+
+                    <label for="confirm" id = "Labelconfirm" style="position : relative; left : 2px;"><b>Confirm Password</b></label><br>
+                    <input type ="password" id = "confirm"  minlength = "10" maxlength = "18" style = "position : relative; left : 2px;"><br>
+
+                    <button type ="submit"  style = "position : relative; left :100px" disabled = true>Signup</button><br>
+                </form>
+            </div>
+        </div>
+
+
+        <script>
+            //Disable dropdown item of the current page
+            function Disablekey(){
+                document.querySelector('#login_item').style.cursor = not-allowed;
+                document.querySelector('#login_item').style.pointerEvents = none;
+
+            }
+            //Hover function
+            function Hover(keys){
+                keys.addEventListener('mouseenter',function(){
+                    keys.style.backgroundColor = 'black';
+                });
+                keys.addEventListener('mouseleave',function(){
+                    keys.style.backgroundColor = '#210ed142';
+                });
+
+            }
+            //Check the current page and adjust the option respectively
+            document.addEventListener('DOMContentLoaded',function(){
+                let key = document.querySelector('#login_item');
+                key.style.backgroundColor = 'white';
+                key.style.color = 'black';
+                Disablekey();
+            });
+            //Implement the hover for the dropdown items manually
+            let items = document.getElementsByTagName('li');
+            for ( let i = 0; i < items.length;i++ ){
+                if (i != 1){
+                    Hover(items[i]);
+                };
+
+            };
+            //toggle eye feature
+            function showPassword(){
+                let parentEye = document.getElementById("toggle-eye");
+                let childEye = parentEye.querySelector('i');
+                if(childEye.className == "bi bi-eye-fill"){
+                    childEye.className = "bi bi-eye-slash-fill";
+                }
+                else {
+                    childEye.className = "bi bi-eye-fill";
+                }
+                let password = document.getElementById('password');
+                if( password.type == "password"){
+                    password.type = "text";
+                }
+                else{
+                    password.type = "password";
+                }
+            }
+            //Check if both passwords entered are same
+            let password = document.getElementById("password");
+            let confirm  = document.getElementById("confirm");
+            confirm.addEventListener('input',signupfunc);
+            password.addEventListener('input',signupfunc);
+            function signupfunc(){
+                //Enable button if passwords match
+                if(password.value === confirm.value) {
+                    let loginBox = document.getElementById("Login_Box");
+                    let signupKey = loginBox.querySelector('button');
+                    signupKey.disabled = false;
+                    document.querySelector("WELCOME").innerHTML = "Signed";
+                }
+                 //Append pop_up message when passwords dont match
+                else{
+                    document.querySelector("WELCOME").innerHTML = "Works";
+                    signupKey.disabled = true;
+                    let login_box = document.getElementById("Login_Box");
+                    const append = document.createElement("p");
+                    let pop_up = "Passwords don't match ";
+                    append.innerHTML= pop_up;
+                    let label = getElementById("Labelconfirm");
+                    label.insertAdjacentElement('beforebegin',append);
+                    //Style the new element
+                    append.style.fontSize = "80px";
+                    append.style.color = "red";
+                    append.style.marginBottom = "0px";
+                    append.style.marginTop = "0px";
+                    append.style.position = "relative";
+                    append.style.left = "2px";
+
+                }
+            }
+
+        </script>
+    </body>
+</html>

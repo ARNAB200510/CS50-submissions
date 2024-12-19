@@ -1,0 +1,26 @@
+<h1>
+<a>
+<img>
+<form>
+<input>
+<i>
+<label>
+<button>
+<p>
+<span>
+
+background-color :#f18509e0;
+color: #fff;
+margin:none;
+padding:0px;
+height: 80px;
+font-size:50%;
+font-family:verdana;
+display: flex;
+align-items : center;
+justify-content: space-between;
+position: relative;
+font-family : 'Merriweather', sans-serif;
+font-style: oblique;
+Javascript was used to add dynamic effects such as the lock sign changing after logged in
+Bootstrap was used to add icons such as bi bi-search to the project._

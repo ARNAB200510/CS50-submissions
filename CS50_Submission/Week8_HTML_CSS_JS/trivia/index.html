@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>
+                    Part 1: Multiple Choice
+                </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+
+                <h3>
+                    What is the correct path of execution of a program in c?
+                </h3>
+                <!--USE BUTTONS FOR OPTIONS IN THE MCQ-->
+                <button class = "mcq-button" id ='button1' type = "submit">HDD-RAM-CPU</button>
+                <button class = "mcq-button" id ='button2' type = "submit"> RAM-CPU-HDD</button>
+                <button class = "mcq-button" id ='button3' type = "submit">CPU-HDD-RAM</button>
+                <button class = "mcq-button" id ='button4' type = "submit">NONE</button>
+
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                 <h3 id = "OP">
+                    In c, what does (int *)array[3] this create?
+
+                 </h3>
+                 <input  autofill = "off" placeholder = "ANSWER IN 1 WORD">
+                 <button id = "CONFIRM">SUBMIT</button>
+
+            </div>
+        </div>
+    </body>
+    <script>
+
+        //Disable all other buttons when one is clicked
+        function Disableallbuttons(){
+            let Buttons = document.querySelectorAll('.mcq-button');
+            for (let button of Buttons){
+                button.disabled = true;
+            }
+        }
+        //Correct option, turn green and add CORRECT!
+        document.querySelector('#button1').addEventListener('click',function() {
+        document.querySelector('#button1').style.backgroundColor = 'green';
+        Disableallbuttons();
+        let element = document.querySelector('h3');
+        element.innerHTML += '<p>CORRECT!</p>';
+
+
+        });
+        //Incorrect options, turn red and add INCORRECT!
+        document.querySelector('#button2').addEventListener('click',function() {
+        document.querySelector('#button2').style.backgroundColor = 'red';
+        Disableallbuttons();
+        document.querySelector('h3').innerHTML += '<p>INCORRECT!</p>';
+
+        });
+        document.querySelector('#button3').addEventListener('click',function() {
+        document.querySelector('#button3').style.backgroundColor = 'red';
+        Disableallbuttons();
+        document.querySelector('h3').innerHTML += '<p>INCORRECT!</p>';
+
+        });
+        document.querySelector('#button4').addEventListener('click',function() {
+        document.querySelector('#button4').style.backgroundColor = 'red';
+        Disableallbuttons();
+        document.querySelector('h3').innerHTML += '<p>INCORRECT!</p>';
+        });
+        //For the free response
+        document.querySelector('#CONFIRM').addEventListener('click',function(){
+            if (document.querySelector('input').value.toUpperCase() == "POINTER"){
+                document.querySelector('input').style.color = 'green';
+                document.querySelector('#OP').innerHTML += '<p>CORRECT!</p>';
+                document.querySelector('#CONFIRM').disabled = true;
+                document.querySelector('input').disabled = true;
+
+            }
+            else{
+                document.querySelector('input').style.color = 'red';
+                document.querySelector('#OP').innerHTML += '<p>INCORRECT!</p>';
+                document.querySelector('#CONFIRM').disabled = true;
+                document.querySelector('input').disabled = true;
+            }
+
+
+
+        });
+    </script>
+</html>
