@@ -1,0 +1,4 @@
+SELECT AVG(energy), AVG(danceability),AVG(valence) FROM songs;
+avg(energy) | avg(danceability) | avg(valence)
+0.65906     | 0.71646           | 0.484443
+SO AUDIO AURA COULD BE LIKE"SPIRITED AND ENTHUSIAST"
